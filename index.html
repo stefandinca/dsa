@@ -331,6 +331,122 @@
         .mobile-menu.active .mobile-menu-item:nth-child(4) { transition-delay: 0.25s; }
         .mobile-menu.active .mobile-menu-item:nth-child(5) { transition-delay: 0.3s; }
 
+        /* Desktop Dropdown Menu */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            top: calc(100% + 1rem);
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 280px;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 1.5rem;
+            padding: 0.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-50%) translateY(-10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            z-index: 100;
+        }
+
+        .dark .dropdown-content {
+            background: rgba(17, 24, 39, 0.98);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-dropdown:hover .dropdown-content,
+        .nav-dropdown.active .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: #374151;
+            border-radius: 1rem;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .dark .dropdown-content a {
+            color: #e5e7eb;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(34, 197, 94, 0.1);
+            color: #16a34a;
+            transform: translateX(4px);
+        }
+
+        .dark .dropdown-content a:hover {
+            color: #4ade80;
+        }
+
+        .dropdown-arrow {
+            display: inline-block;
+            margin-left: 0.25rem;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow,
+        .nav-dropdown.active .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Mobile Dropdown */
+        .mobile-dropdown {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .mobile-dropdown.active {
+            max-height: 500px;
+        }
+
+        .mobile-dropdown-item {
+            padding: 0.75rem 1.5rem 0.75rem 3rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-item {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-item:nth-child(1) { transition-delay: 0.05s; }
+        .mobile-dropdown.active .mobile-dropdown-item:nth-child(2) { transition-delay: 0.1s; }
+        .mobile-dropdown.active .mobile-dropdown-item:nth-child(3) { transition-delay: 0.15s; }
+        .mobile-dropdown.active .mobile-dropdown-item:nth-child(4) { transition-delay: 0.2s; }
+
+        .mobile-dropdown-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .mobile-dropdown-toggle svg {
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-dropdown-toggle.active svg {
+            transform: rotate(180deg);
+        }
+
         /* Hover Glow Effect */
         .hover-glow {
             position: relative;
@@ -410,7 +526,7 @@
         }
     </style>
 </head>
-<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+<body class="bg-white dark:bg-gray-950 text-gray-900 selection:bg-[#059669] selection:text-white dark:text-gray-100 transition-colors duration-300">
 
     <!-- Custom Cursor -->
    
@@ -427,9 +543,39 @@
                 </a>
 
                 <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#" class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Servicii</a>
+                    <!-- Servicii Dropdown -->
+                    <div class="nav-dropdown">
+                        <button class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center">
+                            Servicii
+                            <svg class="w-4 h-4 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#servicii">Managementul deșeurilor</a>
+                            <a href="#servicii">Raportări AFM</a>
+                            <a href="#servicii">Raportări de mediu</a>
+                            <a href="#servicii">Asistență controale mediu</a>
+                        </div>
+                    </div>
+
                     <a href="legislatie.html" class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Legislație și noutăți</a>
-                    <a href="#" class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Avize și autorizații</a>
+
+                    <!-- Avize și autorizații Dropdown -->
+                    <div class="nav-dropdown">
+                        <button class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center">
+                            Avize și autorizații
+                            <svg class="w-4 h-4 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#avize">Acordul de Mediu</a>
+                            <a href="#avize">Acordul de preluare ape uzate</a>
+                            <a href="#avize">Autorizația de Mediu</a>
+                        </div>
+                    </div>
+
                     <a href="#" class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Articole</a>
                     <a href="#" class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Dicționar de mediu</a>
                     <a href="#contact" class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
@@ -476,15 +622,55 @@
 
             <!-- Mobile Menu Items -->
             <nav class="space-y-2">
-                <a href="#" class="mobile-menu-item block px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all">
-                    Servicii
-                </a>
-                <a href="#" class="mobile-menu-item block px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all">
+                <!-- Servicii Dropdown -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-dropdown-toggle px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all" data-dropdown="servicii">
+                        <span>Servicii</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown" id="dropdown-servicii">
+                        <a href="#servicii" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Managementul deșeurilor
+                        </a>
+                        <a href="#servicii" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Raportări AFM
+                        </a>
+                        <a href="#servicii" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Raportări de mediu
+                        </a>
+                        <a href="#servicii" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Asistență controale mediu
+                        </a>
+                    </div>
+                </div>
+
+                <a href="legislatie.html" class="mobile-menu-item block px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all">
                     Legislație și noutăți
                 </a>
-                <a href="#" class="mobile-menu-item block px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all">
-                    Avize și autorizații
-                </a>
+
+                <!-- Avize și autorizații Dropdown -->
+                <div class="mobile-menu-item">
+                    <button class="mobile-dropdown-toggle px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all" data-dropdown="avize">
+                        <span>Avize și autorizații</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown" id="dropdown-avize">
+                        <a href="#avize" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Acordul de Mediu
+                        </a>
+                        <a href="#avize" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Acordul de preluare ape uzate
+                        </a>
+                        <a href="#avize" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Autorizația de Mediu
+                        </a>
+                    </div>
+                </div>
+
                 <a href="#" class="mobile-menu-item block px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all">
                     Articole
                 </a>
@@ -559,20 +745,20 @@
                 <!-- Floating Stats -->
                 <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                     <div class="glass rounded-2xl p-6 hover-glow float" style="animation-delay: 0s;">
-                        <div class="text-4xl font-black gradient-text count-number" data-target="231">0</div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400 mt-2">Clienți Mulțumiți</div>
+                        <div class="text-4xl font-black gradient-text " >10+</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400 mt-2">Industrii</div>
                     </div>
                     <div class="glass rounded-2xl p-6 hover-glow float" style="animation-delay: 0.5s;">
-                        <div class="text-4xl font-black gradient-text count-number" data-target="40">0</div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400 mt-2">Ani Experiență</div>
+                        <div class="text-4xl font-black gradient-text count-number" data-target="20000">0+</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400 mt-2">Ore de consultanță</div>
                     </div>
                     <div class="glass rounded-2xl p-6 hover-glow float" style="animation-delay: 1s;">
-                        <div class="text-4xl font-black gradient-text count-number" data-target="1500">0</div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400 mt-2">Raportări Realizate</div>
+                        <div class="text-4xl font-black gradient-text count-number" data-target="5000">0+</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400 mt-2">Raportări de mediu</div>
                     </div>
                     <div class="glass rounded-2xl p-6 hover-glow float" style="animation-delay: 1.5s;">
-                        <div class="text-4xl font-black gradient-text">100<span class="text-2xl">%</span></div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400 mt-2">Conformitate</div>
+                        <div class="text-4xl font-black gradient-text">500+</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400 mt-2">Clienți Mulțumiți</div>
                     </div>
                 </div>
             </div>
@@ -603,14 +789,12 @@
                 <!-- Card 1 - Large -->
                 <div class="md:col-span-2 service-card tilt-card glass rounded-3xl p-8 md:p-12 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 fade-in group">
                     <div class="tilt-card-inner">
-                        <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                            </svg>
+                        <div class="w-16 h-16 p-2 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <img src="img/management-50x50.png"/>
                         </div>
                         <h3 class="font-display font-bold text-3xl md:text-4xl mb-4">Managementul Deșeurilor</h3>
                         <p class="text-gray-600 dark:text-gray-400 text-lg mb-6">
-                            Deșeurile bine gestionate pot fi o sursă valoroasă de materiale reciclabile care pot fi reutilizate în proporție de 100%. Oferim consultanță completă pentru managementul deșeurilor conform legislației în vigoare.
+                            Conform legislației în vigoare, operatorii economici trebuie să depună o serie de rapoarte privind situația ambalajelor introduse pe piața națională, atât pentru cele rezultate din activități propria cât și pentru ambalajele importate.
                         </p>
                         <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group">
                             Detalii complete
@@ -624,14 +808,12 @@
                 <!-- Card 2 -->
                 <div class="service-card tilt-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-accent-500/10 transition-all duration-300 fade-in group">
                     <div class="tilt-card-inner">
-                        <div class="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                            </svg>
+                        <div class="w-16 h-16 p-2 bg-gradient-to-br from-accent-500 to-accent-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <img src="img/raportari-administratie-50x50.png"/>
                         </div>
-                        <h3 class="font-display font-bold text-2xl mb-4">Raportări AFM & Mediu</h3>
+                        <h3 class="font-display font-bold text-2xl mb-4">Raportări Administrația Fondului pentru Mediu</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-6">
-                            Întocmim și depunem corect și la timp toate declarațiile către Administrația Fondului pentru Mediu și APM. Raportări prin sistemul integrat de mediu (SIM).
+                            Deșeurile constituie adesea o sursă de poluare, însă deșeurile bine gestionate pot fi o sursă valoroasă de materiale reciclabile care pot fi reutilizate în proporție de 100%.
                         </p>
                         <a href="#" class="inline-flex items-center text-accent-600 dark:text-accent-400 font-semibold group">
                             Află mai mult
@@ -645,14 +827,12 @@
                 <!-- Card 3 -->
                 <div class="service-card tilt-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 fade-in group">
                     <div class="tilt-card-inner">
-                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
+                        <div class="w-16 h-16 p-2 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <img src="img/externalizare-50x50.png"/>
                         </div>
-                        <h3 class="font-display font-bold text-2xl mb-4">Autorizații & Acorduri de Mediu</h3>
+                        <h3 class="font-display font-bold text-2xl mb-4">Externalizarea responsabilității de mediu</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-6">
-                            Înainte de începerea activității economice, vă ajutăm să identificați codurile CAEN și să obțineți autorizația de mediu sau acordul de mediu necesare.
+                            Complexitatea legislației de mediu pune deseori piedici în identificarea responsabilităților pe care le impune activitatea desfășurată, de aceea este recomandat să apelați la o persoană care cunoaște acest domeniu și poate interpreta în mod corect legislația, oferindu-vă răspunsuri clare.
                         </p>
                         <a href="#" class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold group">
                             Află mai mult
@@ -666,16 +846,52 @@
                 <!-- Card 4 - Wide -->
                 <div class="md:col-span-2 service-card tilt-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 fade-in group">
                     <div class="tilt-card-inner">
-                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                            </svg>
+                        <div class="w-16 h-16 p-2  bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <img src="img/autorizatie-50x50.png"/>
                         </div>
-                        <h3 class="font-display font-bold text-3xl mb-4">Asistență în Timpul Controalelor</h3>
+                        <h3 class="font-display font-bold text-3xl mb-4">Obținerea autorizației și acordului de mediu</h3>
                         <p class="text-gray-600 dark:text-gray-400 text-lg mb-6">
-                            Vă oferim asistență completă în timpul controalelor din partea autorităților de mediu: Garda de Mediu, Poliția Locală sau Administrația Fondului pentru Mediu.
+                            Înainte de a începe orice activitate economică, este important să identificați codul CAEN alocat, deoarece anumite activități ar putea avea un impact semnificativ asupra mediului înconjurător și în acest caz se impune obținerea autorizației de mediu. Consultanța de mediu oferită de noi include și obținerea acestor acte.
                         </p>
                         <a href="asistenta-controale.html" class="inline-flex items-center text-purple-600 dark:text-purple-400 font-semibold group">
+                            Află mai mult
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5 - Wide -->
+                <div class="md:col-span-2 service-card tilt-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 fade-in group">
+                    <div class="tilt-card-inner">
+                        <div class="w-16 h-16 p-2 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <img src="img/asistenta-50x50.png"/>
+                        </div>
+                        <h3 class="font-display font-bold text-3xl mb-4">Asistență în timpul controalelor din partea autorităților de mediu</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg mb-6">
+                            Orice operator economic generator de deșeuri poate fi supus unui control din partea autorităților de mediu. În funcție de activitatea desfășurată și de obligațiile impuse prin legislația de mediu, controlul poate fi efectuat de către Garda de Mediu, Poliția Locală – departamentul de mediu sau Administrația Fondului pentru Mediu.
+                        </p>
+                        <a href="asistenta-controale.html" class="inline-flex items-center text-purple-600 dark:text-purple-400 font-semibold group">
+                            Află mai mult
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                 <!-- Card 6 -->
+                <div class="service-card tilt-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 fade-in group">
+                    <div class="tilt-card-inner">
+                        <div class="w-16 h-16 p-2  bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <img src="img/raportari-de-mediu-50x50.png"/>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl mb-4">Raportări de mediu</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">
+                            Raportările de mediu vor fi depuse pe suport hârtie, iar ulterior, pentru o bună parte dintre acestea se va face raportarea on-line în Sistemul Integrat de Mediu(SIM). Acesta a fost dezvoltat de către Agenția Națională pentru Protecția Mediului(ANPM) pentru a facilita raportarea către instituțiile abilitate ale Uniunii Europene.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold group">
                             Află mai mult
                             <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -697,7 +913,7 @@
                         Rezultate Garantate.
                     </h2>
                     <p class="text-xl text-white/80 mb-8">
-                        Cu peste 40 de ani de experiență în domeniul protecției mediului, 231 de clienți mulțumiți și certificări ISO, demonstrăm angajamentul nostru pentru excelență și conformitate.
+                        Cu peste 5,000 de raportări de mediu, 500+ de clienți mulțumiți și certificări ISO, demonstrăm angajamentul nostru pentru excelență și conformitate.
                     </p>
                     <a href="#contact" class="magnetic-btn inline-block px-8 py-4 bg-white text-primary-700 rounded-full font-semibold text-lg hover:shadow-2xl transition-all">
                         Începe Colaborarea
@@ -726,11 +942,11 @@
                     <!-- Stats -->
                     <div class="col-span-2 grid grid-cols-2 gap-4">
                         <div class="glass rounded-xl p-6 text-center">
-                            <div class="text-4xl font-black text-white count-number" data-target="231">0</div>
+                            <div class="text-4xl font-black text-white ">500+</div>
                             <div class="text-white/70 mt-2">Clienți</div>
                         </div>
                         <div class="glass rounded-xl p-6 text-center">
-                            <div class="text-4xl font-black text-white count-number" data-target="1500">0</div>
+                            <div class="text-4xl font-black text-white count-number" data-target="5000">0</div>
                             <div class="text-white/70 mt-2">Raportări</div>
                         </div>
                     </div>
@@ -888,7 +1104,9 @@
                 <div>
                     <img src="img/logo-dsa.png" alt="DSA Environment" class="h-12 mb-6 brightness-0 invert opacity-80">
                     <p class="text-sm leading-relaxed">
-                        Transformăm complexitatea în simplitate. Partenerul tău de încredere pentru conformarea de mediu.
+                        <div><a href="https://maps.app.goo.gl/s2RUzgURwtJqLxp48">Șoseaua Unirii 236, Comuna Corbeanca, Ilfov</a></div>
+                        <div><a href="tel:+40721900280">+40 721 900 280</a></div>
+                        <div><a href="mailto:contact@dsa-environment.ro">contact@dsa-environment.ro</a></div>
                     </p>
                 </div>
 
@@ -974,6 +1192,20 @@
             if (window.innerWidth >= 1024 && mobileMenu.classList.contains('active')) {
                 toggleMobileMenu();
             }
+        });
+
+        // Mobile Dropdown Toggle
+        const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+
+        mobileDropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const dropdownId = 'dropdown-' + toggle.dataset.dropdown;
+                const dropdown = document.getElementById(dropdownId);
+
+                // Toggle active state
+                toggle.classList.toggle('active');
+                dropdown.classList.toggle('active');
+            });
         });
 
         // Scroll Progress Bar
