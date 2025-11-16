@@ -329,47 +329,9 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #16a34a;
         }
-
-        /* Loading Animation */
-        .loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10000;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
-
-        .loader.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .loader-ring {
-            width: 80px;
-            height: 80px;
-            border: 4px solid rgba(34, 197, 94, 0.1);
-            border-top-color: #22c55e;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
     </style>
 </head>
 <body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-
-    <!-- Loading Screen -->
-    <div class="loader" id="loader">
-        <div class="loader-ring"></div>
-    </div>
 
     <!-- Custom Cursor -->
     <div class="custom-cursor" id="cursor"></div>
@@ -569,7 +531,7 @@
                         <p class="text-gray-600 dark:text-gray-400 text-lg mb-6">
                             Vă oferim asistență completă în timpul controalelor din partea autorităților de mediu: Garda de Mediu, Poliția Locală sau Administrația Fondului pentru Mediu.
                         </p>
-                        <a href="#" class="inline-flex items-center text-purple-600 dark:text-purple-400 font-semibold group">
+                        <a href="asistenta-controale.html" class="inline-flex items-center text-purple-600 dark:text-purple-400 font-semibold group">
                             Află mai mult
                             <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -789,20 +751,20 @@
                 <div>
                     <h4 class="font-display font-bold text-white mb-4">Servicii</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-primary-400 transition-colors">Management Deșeuri</a></li>
-                        <li><a href="#" class="hover:text-primary-400 transition-colors">Raportări AFM</a></li>
-                        <li><a href="#" class="hover:text-primary-400 transition-colors">Autorizații Mediu</a></li>
-                        <li><a href="#" class="hover:text-primary-400 transition-colors">Asistență Controale</a></li>
+                        <li><a href="#servicii" class="hover:text-primary-400 transition-colors">Management Deșeuri</a></li>
+                        <li><a href="#servicii" class="hover:text-primary-400 transition-colors">Raportări AFM</a></li>
+                        <li><a href="#servicii" class="hover:text-primary-400 transition-colors">Autorizații Mediu</a></li>
+                        <li><a href="asistenta-controale.html" class="hover:text-primary-400 transition-colors">Asistență Controale</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-display font-bold text-white mb-4">Companie</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-primary-400 transition-colors">Despre Noi</a></li>
-                        <li><a href="#" class="hover:text-primary-400 transition-colors">Certificări</a></li>
-                        <li><a href="#" class="hover:text-primary-400 transition-colors">Articole</a></li>
-                        <li><a href="#" class="hover:text-primary-400 transition-colors">Contact</a></li>
+                        <li><a href="#expertiza" class="hover:text-primary-400 transition-colors">Despre Noi</a></li>
+                        <li><a href="#expertiza" class="hover:text-primary-400 transition-colors">Certificări</a></li>
+                        <li><a href="#articole" class="hover:text-primary-400 transition-colors">Articole</a></li>
+                        <li><a href="#contact" class="hover:text-primary-400 transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
@@ -835,14 +797,6 @@
 
     <!-- JavaScript -->
     <script>
-        // Loading Screen
-        window.addEventListener('load', () => {
-            const loader = document.getElementById('loader');
-            setTimeout(() => {
-                loader.classList.add('hidden');
-            }, 800);
-        });
-
         // Custom Cursor
         const cursor = document.getElementById('cursor');
         const cursorDot = document.getElementById('cursorDot');
