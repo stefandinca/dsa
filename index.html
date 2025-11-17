@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -50,491 +50,12 @@
         }
     </script>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-
-        
-
-        /* Animated Gradient Background */
-        .gradient-bg {
-            background: linear-gradient(-45deg, #065f46, #10b981, #059669, #047857);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-        }
-
-        .dark .gradient-bg {
-            background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
-            background-size: 400% 400%;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Mesh Gradient */
-        .mesh-gradient {
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.15) 0px, transparent 50%),
-                radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 0.15) 0px, transparent 50%),
-                radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 0.15) 0px, transparent 50%),
-                radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 0.15) 0px, transparent 50%),
-                radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.15) 0px, transparent 50%),
-                radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.15) 0px, transparent 50%),
-                radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.15) 0px, transparent 50%);
-            filter: blur(60px);
-            animation: meshMove 20s ease infinite;
-        }
-
-        @keyframes meshMove {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-
-        /* Glassmorphism */
-        .glass {
-            background: rgba(255, 255, 255, 0.35);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .dark .glass {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        /* 3D Card Tilt Effect */
-        .tilt-card {
-            transform-style: preserve-3d;
-            transition: all 0.3s ease;
-        }
-
-        .tilt-card-inner {
-            transform: translateZ(50px);
-        }
-
-        /* Floating Animation */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        /* Scroll Progress Bar */
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #22c55e, #ec4899);
-            z-index: 9999;
-            transform-origin: left;
-            transition: transform 0.1s ease;
-        }
-
-        /* Fade In Animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Magnetic Button Effect */
-        .magnetic-btn {
-            position: relative;
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        /* Gradient Text */
-        .gradient-text {
-            background: linear-gradient(135deg, #22c55e, #10b981, #ec4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 200% 200%;
-            animation: gradientShift 5s ease infinite;
-        }
-
-        /* Bento Grid */
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        /* Particle Background */
-        #particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(34, 197, 94, 0.3);
-            border-radius: 50%;
-            animation: particleFloat 10s infinite ease-in-out;
-        }
-
-        @keyframes particleFloat {
-            0%, 100% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) translateX(100px);
-                opacity: 0;
-            }
-        }
-
-        /* Dark Mode Transition */
-        * {
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-        }
-
-        /* Hamburger Menu Animations */
-        .hamburger {
-            cursor: pointer;
-            width: 24px;
-            height: 24px;
-            position: relative;
-            z-index: 60;
-        }
-
-        .hamburger span {
-            display: block;
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            background: currentColor;
-            border-radius: 2px;
-            opacity: 1;
-            left: 0;
-            transform: rotate(0deg);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .hamburger span:nth-child(1) {
-            top: 0px;
-        }
-
-        .hamburger span:nth-child(2) {
-            top: 10px;
-        }
-
-        .hamburger span:nth-child(3) {
-            top: 20px;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            top: 10px;
-            transform: rotate(135deg);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-            left: -60px;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            top: 10px;
-            transform: rotate(-135deg);
-        }
-
-        /* Mobile Menu Animations */
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 100%;
-            max-width: 400px;
-            height: 100vh;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-            z-index: 50;
-            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow-y: auto;
-        }
-
-        .dark .mobile-menu {
-            background: rgba(17, 24, 39, 0.98);
-            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .mobile-menu.active {
-            right: 0;
-        }
-
-        .mobile-menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0);
-            z-index: 40;
-            pointer-events: none;
-            transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .mobile-menu-overlay.active {
-            background: rgba(0, 0, 0, 0.5);
-            pointer-events: all;
-        }
-
-        .mobile-menu-item {
-            opacity: 0;
-            transform: translateX(30px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .mobile-menu.active .mobile-menu-item {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .mobile-menu.active .mobile-menu-item:nth-child(1) { transition-delay: 0.1s; }
-        .mobile-menu.active .mobile-menu-item:nth-child(2) { transition-delay: 0.15s; }
-        .mobile-menu.active .mobile-menu-item:nth-child(3) { transition-delay: 0.2s; }
-        .mobile-menu.active .mobile-menu-item:nth-child(4) { transition-delay: 0.25s; }
-        .mobile-menu.active .mobile-menu-item:nth-child(5) { transition-delay: 0.3s; }
-
-        /* Desktop Dropdown Menu */
-        .nav-dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            position: absolute;
-            top: calc(100% + 1rem);
-            left: 50%;
-            transform: translateX(-50%);
-            min-width: 280px;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 1.5rem;
-            padding: 0.5rem;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateX(-50%) translateY(-10px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            z-index: 100;
-        }
-
-        .dark .dropdown-content {
-            background: rgba(17, 24, 39, 0.98);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        }
-
-        .nav-dropdown:hover .dropdown-content,
-        .nav-dropdown.active .dropdown-content {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        .dropdown-content a {
-            display: block;
-            padding: 0.75rem 1.25rem;
-            color: #374151;
-            border-radius: 1rem;
-            transition: all 0.2s ease;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        .dark .dropdown-content a {
-            color: #e5e7eb;
-        }
-
-        .dropdown-content a:hover {
-            background: rgba(34, 197, 94, 0.1);
-            color: #16a34a;
-            transform: translateX(4px);
-        }
-
-        .dark .dropdown-content a:hover {
-            color: #4ade80;
-        }
-
-        .dropdown-arrow {
-            display: inline-block;
-            margin-left: 0.25rem;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-dropdown:hover .dropdown-arrow,
-        .nav-dropdown.active .dropdown-arrow {
-            transform: rotate(180deg);
-        }
-
-        /* Mobile Dropdown */
-        .mobile-dropdown {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .mobile-dropdown.active {
-            max-height: 500px;
-        }
-
-        .mobile-dropdown-item {
-            padding: 0.75rem 1.5rem 0.75rem 3rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-            opacity: 0;
-            transform: translateX(-10px);
-            transition: all 0.3s ease;
-        }
-
-        .mobile-dropdown.active .mobile-dropdown-item {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .mobile-dropdown.active .mobile-dropdown-item:nth-child(1) { transition-delay: 0.05s; }
-        .mobile-dropdown.active .mobile-dropdown-item:nth-child(2) { transition-delay: 0.1s; }
-        .mobile-dropdown.active .mobile-dropdown-item:nth-child(3) { transition-delay: 0.15s; }
-        .mobile-dropdown.active .mobile-dropdown-item:nth-child(4) { transition-delay: 0.2s; }
-
-        .mobile-dropdown-toggle {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .mobile-dropdown-toggle svg {
-            transition: transform 0.3s ease;
-        }
-
-        .mobile-dropdown-toggle.active svg {
-            transform: rotate(180deg);
-        }
-
-        /* Hover Glow Effect */
-        .hover-glow {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hover-glow::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(34, 197, 94, 0.3) 0%, transparent 70%);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s ease, height 0.6s ease;
-        }
-
-        .hover-glow:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        /* Number Counter Animation */
-        @keyframes countUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .count-up {
-            animation: countUp 0.8s ease forwards;
-        }
-
-        /* Service Card Hover */
-        .service-card {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .service-card:hover::after {
-            left: 100%;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Hide scrollbar but keep functionality */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #22c55e;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #16a34a;
-        }
-    </style>
+    
 </head>
 <body class="bg-white dark:bg-gray-950 text-gray-900 selection:bg-[#059669] selection:text-white dark:text-gray-100 transition-colors duration-300">
 
-    <!-- Custom Cursor -->
-   
-
-    <!-- Scroll Progress Bar -->
     <div class="progress-bar" id="progressBar"></div>
 
-    <!-- Floating Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
         <div class="container mx-auto px-6 py-4">
             <div class="glass glass-menu rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
@@ -543,7 +64,6 @@
                 </a>
 
                 <div class="hidden lg:flex items-center space-x-8">
-                    <!-- Servicii Dropdown -->
                     <div class="nav-dropdown">
                         <button class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center">
                             Servicii
@@ -552,16 +72,15 @@
                             </svg>
                         </button>
                         <div class="dropdown-content">
-                            <a href="#servicii">Managementul deșeurilor</a>
-                            <a href="#servicii">Raportări AFM</a>
-                            <a href="#servicii">Raportări de mediu</a>
-                            <a href="#servicii">Asistență controale mediu</a>
+                            <a href="managementul-deseurilor.html">Managementul deșeurilor</a>
+                            <a href="raportari-afm.html">Raportări AFM</a>
+                            <a href="raportari-de-mediu.html">Raportări de mediu</a>
+                            <a href="asistenta-controale.html">Asistență controale mediu</a>
                         </div>
                     </div>
 
                     <a href="legislatie.html" class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Legislație și noutăți</a>
 
-                    <!-- Avize și autorizații Dropdown -->
                     <div class="nav-dropdown">
                         <button class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center">
                             Avize și autorizații
@@ -582,7 +101,6 @@
                 </div>
 
                 <div class="flex items-center space-x-4">
-                    <!-- Dark Mode Toggle -->
                     <button id="darkModeToggle" class="p-2 rounded-full glass hover:bg-white/10 transition-all" aria-label="Toggle dark mode">
                         <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
@@ -596,7 +114,6 @@
                         Contact
                     </a>
 
-                    <!-- Hamburger Menu Button (Mobile Only) -->
                     <button id="hamburgerBtn" class="lg:hidden p-2 rounded-full glass hover:bg-white/10 transition-all" aria-label="Toggle menu">
                         <div class="hamburger">
                             <span></span>
@@ -609,20 +126,15 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
     <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
 
-    <!-- Mobile Menu -->
     <div id="mobileMenu" class="mobile-menu">
         <div class="p-8">
-            <!-- Mobile Menu Header -->
             <div class="flex items-center justify-between mb-12 mt-4">
                 <a href="index.html#hero"><img src="img/logo-dsa-light.png" alt="DSA Environment" class="h-10"></a>
             </div>
 
-            <!-- Mobile Menu Items -->
             <nav class="space-y-2">
-                <!-- Servicii Dropdown -->
                 <div class="mobile-menu-item">
                     <button class="mobile-dropdown-toggle px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all" data-dropdown="servicii">
                         <span>Servicii</span>
@@ -631,16 +143,16 @@
                         </svg>
                     </button>
                     <div class="mobile-dropdown" id="dropdown-servicii">
-                        <a href="#servicii" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                        <a href="managementul-deseurilor.html" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
                             Managementul deșeurilor
                         </a>
-                        <a href="#servicii" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                        <a href="raportari-afm.html" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
                             Raportări AFM
                         </a>
-                        <a href="#servicii" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                        <a href="raportari-de-mediu.html" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
                             Raportări de mediu
                         </a>
-                        <a href="#servicii" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                        <a href="asistenta-controale.html" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
                             Asistență controale mediu
                         </a>
                     </div>
@@ -650,7 +162,6 @@
                     Legislație și noutăți
                 </a>
 
-                <!-- Avize și autorizații Dropdown -->
                 <div class="mobile-menu-item">
                     <button class="mobile-dropdown-toggle px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all" data-dropdown="avize">
                         <span>Avize și autorizații</span>
@@ -685,7 +196,6 @@
                 </a>
             </nav>
 
-            <!-- Mobile Menu Footer -->
             <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
                 <div class="space-y-4 text-sm text-gray-600 dark:text-gray-400">
                     <a href="tel:+40721900280" class="flex items-center space-x-3 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
@@ -705,7 +215,6 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div class="mesh-gradient"></div>
         <div id="particles"></div>
@@ -742,7 +251,6 @@
                     </a>
                 </div>
 
-                <!-- Floating Stats -->
                 <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                     <div class="glass rounded-2xl p-6 hover-glow float" style="animation-delay: 0s;">
                         <div class="text-4xl font-black gradient-text " >10+</div>
@@ -764,7 +272,6 @@
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
             <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -772,7 +279,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="servicii" class="py-32 relative overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="text-center mb-20 fade-in">
@@ -784,11 +290,9 @@
                 </p>
             </div>
 
-            <!-- Bento Grid Layout -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-                <!-- Card 1 - Large -->
-                <div class="md:col-span-2 service-card tilt-card glass rounded-3xl p-8 md:p-12 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 fade-in group">
-                    <div class="tilt-card-inner">
+                <div class="md:col-span-2 service-card  glass rounded-3xl p-8 md:p-12 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 fade-in group">
+                    <div class="">
                         <div class="w-16 h-16 p-2 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <img src="img/management-50x50.png"/>
                         </div>
@@ -796,7 +300,7 @@
                         <p class="text-gray-600 dark:text-gray-400 text-lg mb-6">
                             Conform legislației în vigoare, operatorii economici trebuie să depună o serie de rapoarte privind situația ambalajelor introduse pe piața națională, atât pentru cele rezultate din activități propria cât și pentru ambalajele importate.
                         </p>
-                        <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group">
+                        <a href="managementul-deseurilor.html" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group">
                             Detalii complete
                             <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -805,9 +309,8 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="service-card tilt-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-accent-500/10 transition-all duration-300 fade-in group">
-                    <div class="tilt-card-inner">
+                <div class="service-card  glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-accent-500/10 transition-all duration-300 fade-in group">
+                    <div class="">
                         <div class="w-16 h-16 p-2 bg-gradient-to-br from-accent-500 to-accent-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <img src="img/raportari-administratie-50x50.png"/>
                         </div>
@@ -824,9 +327,8 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="service-card tilt-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 fade-in group">
-                    <div class="tilt-card-inner">
+                <div class="service-card  glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 fade-in group">
+                    <div class="">
                         <div class="w-16 h-16 p-2 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <img src="img/externalizare-50x50.png"/>
                         </div>
@@ -843,9 +345,8 @@
                     </div>
                 </div>
 
-                <!-- Card 4 - Wide -->
-                <div class="md:col-span-2 service-card tilt-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 fade-in group">
-                    <div class="tilt-card-inner">
+                <div class="md:col-span-2 service-card  glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 fade-in group">
+                    <div class="">
                         <div class="w-16 h-16 p-2  bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <img src="img/autorizatie-50x50.png"/>
                         </div>
@@ -862,9 +363,8 @@
                     </div>
                 </div>
 
-                <!-- Card 5 - Wide -->
-                <div class="md:col-span-2 service-card tilt-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 fade-in group">
-                    <div class="tilt-card-inner">
+                <div class="md:col-span-2 service-card  glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 fade-in group">
+                    <div class="">
                         <div class="w-16 h-16 p-2 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <img src="img/asistenta-50x50.png"/>
                         </div>
@@ -881,9 +381,8 @@
                     </div>
                 </div>
 
-                 <!-- Card 6 -->
-                <div class="service-card tilt-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 fade-in group">
-                    <div class="tilt-card-inner">
+                 <div class="service-card  glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 fade-in group">
+                    <div class="">
                         <div class="w-16 h-16 p-2  bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <img src="img/raportari-de-mediu-50x50.png"/>
                         </div>
@@ -891,7 +390,7 @@
                         <p class="text-gray-600 dark:text-gray-400 mb-6">
                             Raportările de mediu vor fi depuse pe suport hârtie, iar ulterior, pentru o bună parte dintre acestea se va face raportarea on-line în Sistemul Integrat de Mediu(SIM). Acesta a fost dezvoltat de către Agenția Națională pentru Protecția Mediului(ANPM) pentru a facilita raportarea către instituțiile abilitate ale Uniunii Europene.
                         </p>
-                        <a href="#" class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold group">
+                        <a href="raportari-de-mediu.html" class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold group">
                             Află mai mult
                             <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -903,7 +402,6 @@
         </div>
     </section>
 
-    <!-- Expertise Section -->
     <section id="expertiza" class="relative py-32 gradient-bg overflow-hidden">
         <div class="container mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -921,25 +419,22 @@
                 </div>
 
                 <div class="grid grid-cols-2 gap-6 fade-in">
-                    <!-- Certification Card 1 -->
                     <div class="col-span-2 md:col-span-1 glass rounded-2xl p-6 hover:bg-white/20 transition-all group">
                         <div class="aspect-video bg-white/10 rounded-xl mb-4 overflow-hidden">
-                            <img src="https://www.dsa-environment.ro/wp-content/uploads/2021/08/certificare-iso.jpg" alt="ISO Certification" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <img src="img/mountain.avif" alt="ISO Certification" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <h4 class="font-bold text-xl text-white mb-2">ISO 9001 & 14001</h4>
                         <p class="text-white/70">Managementul calității și mediului certificat internațional</p>
                     </div>
 
-                    <!-- Certification Card 2 -->
                     <div class="col-span-2 md:col-span-1 glass rounded-2xl p-6 hover:bg-white/20 transition-all group">
                         <div class="aspect-video bg-white/10 rounded-xl mb-4 overflow-hidden">
-                            <img src="https://www.dsa-environment.ro/wp-content/uploads/2021/08/certificat-elaborator-studii-1.jpg" alt="Elaborator Studii" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <img src="img/mediu.avif" alt="Elaborator Studii" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <h4 class="font-bold text-xl text-white mb-2">Elaborator Studii</h4>
                         <p class="text-white/70">Atestat pentru studii de impact și evaluări de mediu</p>
                     </div>
 
-                    <!-- Stats -->
                     <div class="col-span-2 grid grid-cols-2 gap-4">
                         <div class="glass rounded-xl p-6 text-center">
                             <div class="text-4xl font-black text-white ">500+</div>
@@ -955,92 +450,113 @@
         </div>
     </section>
 
-    <!-- Blog/Articles Section -->
-    <section id="articole" class="py-32 bg-white dark:bg-gray-950">
+    <section id="articole" class="py-32 bg-white dark:bg-gray-950 overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-end mb-16 fade-in">
                 <div>
                     <h2 class="font-display font-black text-5xl md:text-6xl mb-4">
-                        Noutăți & <span class="gradient-text">Analize</span>
+                        Articole <span class="gradient-text">Recente</span>
                     </h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400">Insights despre legislație și sustenabilitate</p>
+                    <p class="text-xl text-gray-600 dark:text-gray-400">Articole interesante</p>
                 </div>
-                <a href="#" class="hidden md:inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group">
-                    Toate Articolele
-                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </a>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group">
+                        Toate
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Article 1 -->
-                <article class="fade-in group tilt-card">
-                    <div class="tilt-card-inner">
-                        <div class="aspect-video rounded-2xl overflow-hidden mb-6">
-                            <img src="https://www.dsa-environment.ro/wp-content/uploads/2023/11/impactul-poluarii-create-de-metalul-nereciclat.jpg" alt="Metal Pollution" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="relative w-full overflow-hidden -mb-8 pb-8 py-4">
+                <div class="carousel-track">
+                    <article class="fade-in group  w-[90vw] sm:w-[48vw] lg:w-[32vw] flex-shrink-0 mr-8">
+                        <div class="">
+                            <div class="aspect-video rounded-2xl overflow-hidden mb-6">
+                                <img src="img/water-pollution.avif" alt="Metal Pollution" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                                Impactul Poluării cu Plastic: O Analiză Detaliată a Consecințelor Nedorite
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                În ultimele decenii, lumea modernă a fost martoră la o creștere exponențială a producției și utilizării de plastic. Deși acest material a adus incontestabil beneficii în viața cotidiană. Devine din ce în ce mai evident că, pe măsură ce cantitățile de plastic continuă să crească, așa și impactul negativ asupra mediului înconjurător devine tot mai …
+                            </p>
+                            <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group">
+                                Citește
+                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
                         </div>
-                        <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                            Impactul poluării create de metalul nereciclat
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            Metalul nereciclat reprezintă o problemă de mediu semnificativă. Reciclarea poate reduce emisiile de CO2 cu până la 90% față de producția din minereu virgin.
-                        </p>
-                        <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group">
-                            Citește
-                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Article 2 -->
-                <article class="fade-in group tilt-card">
-                    <div class="tilt-card-inner">
-                        <div class="aspect-video rounded-2xl overflow-hidden mb-6">
-                            <img src="https://www.dsa-environment.ro/wp-content/uploads/2023/11/impactul-poluarii-cu-sticla-riscuri-si-solutii-pentru-un-mediu-mai-curat.jpg" alt="Glass Pollution" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <article class="fade-in group  w-[90vw] sm:w-[48vw] lg:w-[32vw] flex-shrink-0 mr-8">
+                        <div class="">
+                            <div class="aspect-video rounded-2xl overflow-hidden mb-6">
+                                <img src="img/glass-junk.avif" alt="Glass Pollution" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                                Impactul Poluării cu Sticlă: Riscuri și Soluții Pentru un Mediu Mai Curat
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                               În lumea modernă, sticla este omniprezentă în viața noastră de zi cu zi, de la ambalajele alimentare și până la structuri arhitecturale. Cu toate acestea, puțini dintre noi ne gândim la impactul negativ pe care sticla aruncată necorespunzător îl poate avea asupra mediului.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group">
+                                Citește
+                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
                         </div>
-                        <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                            Impactul Poluării cu Sticlă: Riscuri și Soluții
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            Analizăm provocările și oportunitățile în gestionarea deșeurilor de sticlă.
-                        </p>
-                        <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group">
-                            Citește
-                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Article 3 -->
-                <article class="fade-in group tilt-card">
-                    <div class="tilt-card-inner">
-                        <div class="aspect-video rounded-2xl overflow-hidden mb-6">
-                            <img src="https://www.dsa-environment.ro/wp-content/uploads/2023/10/cultura-reciclarii-durabile-cum-organizezi-eficient-activitatea-de-reciclare-in-cadrul-firmei-tale.jpg" alt="Recycling Culture" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <article class="fade-in group  w-[90vw] sm:w-[48vw] lg:w-[32vw] flex-shrink-0 mr-8">
+                        <div class="">
+                            <div class="aspect-video rounded-2xl overflow-hidden mb-6">
+                                <img src="img/photo-1542158908667-28f4e9e98e43.avif" alt=" Impactul poluării create de metalul nereciclat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                                Impactul poluării create de metalul nereciclat
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                               Poluarea generată de deșeurile de metal nereciclate reprezintă o problemă majoră la nivel global, iar România nu face excepție. În contextul actual, unde sustenabilitatea devine un subiect din ce în ce mai important, micile și mijlociile întreprinderi (IMM-urile) din România au un rol crucial în reducerea impactului negativ asupra mediului. Acest articol își propune să …
+                            </p>
+                            <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group">
+                                Citește
+                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
                         </div>
-                        <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                            Cultura Reciclării Durabile în Cadrul Firmei
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            Cum organizezi eficient activitatea de reciclare în cadrul firmei tale. Ghid complet pentru implementarea unui program de reciclare durabilă și conformă.
-                        </p>
-                        <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group">
-                            Citește
-                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
+                    </article>
+
+                    <article class="fade-in group  w-[90vw] sm:w-[48vw] lg:w-[32vw] flex-shrink-0 mr-8">
+                        <div class="">
+                            <div class="aspect-video rounded-2xl overflow-hidden mb-6">
+                                <img src="img/water-pollution.avif" alt="Metal Pollution" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <h3 class="font-display font-bold text-2xl mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                                Impactul Poluării cu Plastic: O Analiză Detaliată a Consecințelor Nedorite
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                În ultimele decenii, lumea modernă a fost martoră la o creștere exponențială a producției și utilizării de plastic. Deși acest material a adus incontestabil beneficii în viața cotidiană. Devine din ce în ce mai evident că, pe măsură ce cantitățile de plastic continuă să crească, așa și impactul negativ asupra mediului înconjurător devine tot mai …
+                            </p>
+                            <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group">
+                                Citește
+                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                  
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact/CTA Section -->
     <section id="contact" class="relative py-32 overflow-hidden">
         <div class="mesh-gradient"></div>
 
@@ -1054,7 +570,6 @@
                     Contactați-ne pentru o evaluare gratuită. Echipa noastră este gata să vă ofere soluții personalizate.
                 </p>
 
-                <!-- Contact Form -->
                 <div class="glass rounded-3xl p-8 md:p-12 max-w-2xl mx-auto">
                     <form id="contactForm" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1069,7 +584,6 @@
                     </form>
                 </div>
 
-                <!-- Contact Info -->
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
                     <a href="tel:+40721900280" class="glass rounded-2xl p-6 hover:bg-white/20 dark:hover:bg-white/10 transition-all group">
                         <svg class="w-8 h-8 mx-auto mb-3 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1097,7 +611,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-950 text-gray-400 py-20">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
@@ -1113,9 +626,9 @@
                 <div>
                     <h4 class="font-display font-bold text-white mb-4">Servicii</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="#servicii" class="hover:text-primary-400 transition-colors">Management Deșeuri</a></li>
-                        <li><a href="#servicii" class="hover:text-primary-400 transition-colors">Raportări AFM</a></li>
-                        <li><a href="#servicii" class="hover:text-primary-400 transition-colors">Autorizații Mediu</a></li>
+                        <li><a href="managementul-deseurilor.html" class="hover:text-primary-400 transition-colors">Management Deșeuri</a></li>
+                        <li><a href="raportari-afm.html" class="hover:text-primary-400 transition-colors">Raportări AFM</a></li>
+                        <li><a href="raportari-de-mediu.html" class="hover:text-primary-400 transition-colors">Raportări de Mediu</a></li>
                         <li><a href="asistenta-controale.html" class="hover:text-primary-400 transition-colors">Asistență Controale</a></li>
                     </ul>
                 </div>
@@ -1141,7 +654,7 @@
             </div>
 
             <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-sm">&copy; 2025 DSA Environment. Toate drepturile rezervate.</p>
+                <p class="text-sm">© 2025 DSA Environment. Toate drepturile rezervate.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="#" class="hover:text-primary-400 transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -1157,7 +670,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
         // Mobile Menu Toggle
         const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -1302,29 +814,7 @@
             });
         });
 
-        // 3D Tilt Effect on Cards
-        const tiltCards = document.querySelectorAll('.tilt-card');
-
-        tiltCards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-
-                const rotateX = (y - centerY) / 30;
-                const rotateY = (centerX - x) / 30;
-
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
-            });
-        });
-
+      
         // Particle Background
         const particlesContainer = document.getElementById('particles');
         const particleCount = 30;

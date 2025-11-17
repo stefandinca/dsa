@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistență în Timpul Controalelor | DSA Environment</title>
+    <title>Raportări AFM | DSA Environment</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
-   <script>
+    <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -34,8 +34,8 @@
                             700: '#be185d',
                         },
                         'brand-red': {
-                            DEFAULT: '#E11D48', // rose-600 (vibrant accent)
-                            'dark': '#BE123C', // rose-700
+                            DEFAULT: '#E11D48',
+                            'dark': '#BE123C',
                         },
                     },
                     fontFamily: {
@@ -50,11 +50,9 @@
         }
     </script>
 
-    
+   
 </head>
 <body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-
-   
 
     <!-- Scroll Progress Bar -->
     <div class="progress-bar" id="progressBar"></div>
@@ -227,17 +225,17 @@
             <div class="max-w-5xl mx-auto text-center">
                 <div class="fade-in mb-8">
                     <div class="inline-block px-6 py-2 glass rounded-full mb-6">
-                        <span class="text-sm font-semibold text-primary-600 dark:text-primary-400">Servicii de Consultanță</span>
+                        <span class="text-sm font-semibold text-primary-600 dark:text-primary-400">Raportări de Mediu</span>
                     </div>
                     <h1 class="font-display font-black text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight">
-                        Asistență în Timpul<br>
-                        <span class="gradient-text">Controalelor de Mediu</span>
+                        Raportări către<br>
+                        <span class="gradient-text">Administrația Fondului pentru Mediu</span>
                     </h1>
                 </div>
 
                 <div class="fade-in max-w-3xl mx-auto" style="animation-delay: 0.2s;">
                     <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8">
-                        Suntem alături de dumneavoastră pe întreaga perioadă a controlului, oferind suport expert pentru a evita amenzi semnificative.
+                        Transparență, eficiență și conformitate legală. Vă ajutăm să respectați toate obligațiile față de AFM.
                     </p>
                 </div>
 
@@ -255,220 +253,241 @@
         </div>
     </section>
 
-    <!-- Authority Types Section -->
+    <!-- Obligations Cards Section -->
     <section class="py-20 bg-white dark:bg-gray-950">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16 fade-in">
                 <h2 class="font-display font-black text-4xl md:text-6xl mb-6">
-                    Tipuri de <span class="gradient-text">Controale</span>
+                    Obligații <span class="gradient-text">Fondul de Mediu</span>
                 </h2>
                 <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                    Oferim asistență specializată pentru toate tipurile de controale de mediu
+                    Operatorii economici trebuie să raporteze lunar ambalajele introduse pe piața națională
+                </p>
+            </div>
+
+            <!-- Bento Grid Layout -->
+            <div class="bento-grid max-w-7xl mx-auto">
+                <!-- Large Card - Legal Framework -->
+                <div class="md:col-span-2 service-card glass rounded-3xl p-8 md:p-10 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 fade-in">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-3xl mb-4">Cadru Legal</h3>
+                            <div class="glass rounded-2xl p-6 mb-4">
+                                <p class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Legea 249/2015</p>
+                                <p class="text-gray-600 dark:text-gray-400">
+                                    Stabilește obiectivele minime de reciclare pentru deșeurile de ambalaje introduse pe piața națională.
+                                </p>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 text-lg">
+                                Companiile pot alege între gestionare individuală sau colaborare cu o organizație de recuperare a ambalajelor (O.I.R.E.P).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regular Card - Monthly Declarations -->
+                <div class="service-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-accent-500/10 transition-all duration-300 fade-in" style="animation-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-700 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl mb-4">Declarații Lunare</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Raportări obligatorii pentru ambalajele din activități proprii și cele importate.
+                    </p>
+                    <div class="glass rounded-xl p-4">
+                        <p class="text-sm font-semibold text-primary-600 dark:text-primary-400">
+                            Termen: lunar pe platforma AFM.ro
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Regular Card - Penalties -->
+                <div class="service-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 fade-in" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl mb-4">Sancțiuni</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Nedepunerea la timp a declarațiilor constituie contravenție.
+                    </p>
+                    <div class="glass rounded-xl p-4 bg-red-50 dark:bg-red-900/20">
+                        <p class="text-lg font-bold text-red-600 dark:text-red-400">
+                            2.000 - 2.500 lei
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                            Amendă pentru întârziere
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Wide Card - Packaging Types -->
+                <div class="md:col-span-2 service-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 fade-in" style="animation-delay: 0.3s;">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-display font-bold text-2xl mb-4">Identificare Ambalaje</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6">
+                                DSA Environment identifică și cântărește toate tipurile de ambalaje pentru raportare corectă.
+                            </p>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                <div class="glass rounded-xl p-3 text-center">
+                                    <p class="font-semibold text-sm">Hârtie/Carton</p>
+                                </div>
+                                <div class="glass rounded-xl p-3 text-center">
+                                    <p class="font-semibold text-sm">Plastic</p>
+                                </div>
+                                <div class="glass rounded-xl p-3 text-center">
+                                    <p class="font-semibold text-sm">Sticlă</p>
+                                </div>
+                                <div class="glass rounded-xl p-3 text-center">
+                                    <p class="font-semibold text-sm">Metal</p>
+                                </div>
+                                <div class="glass rounded-xl p-3 text-center">
+                                    <p class="font-semibold text-sm">Lemn</p>
+                                </div>
+                                <div class="glass rounded-xl p-3 text-center">
+                                    <p class="font-semibold text-sm">Altele</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicii" class="relative py-32 gradient-bg overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-display font-black text-5xl md:text-6xl text-white mb-6">
+                    Servicii<br>DSA Environment
+                </h2>
+                <p class="text-xl text-white/80 max-w-3xl mx-auto">
+                    Soluții complete pentru conformare cu AFM
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Authority 1 -->
-                <div class="service-card  glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 fade-in group">
-                    <div class="">
-                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6 mx-auto pulse-icon">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-display font-bold text-2xl mb-4 text-center">Garda de Mediu</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-center">
-                            Asistență completă în timpul inspecțiilor de la Garda de Mediu pentru conformitatea activităților dumneavoastră.
-                        </p>
+                <!-- Service 1 -->
+                <div class="glass rounded-3xl p-8 hover:bg-white/20 transition-all fade-in">
+                    <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                        </svg>
                     </div>
+                    <h3 class="font-display font-bold text-2xl text-white mb-3">Identificare & Cântărire</h3>
+                    <p class="text-white/80 text-lg">
+                        Identificăm și cântărim toate tipurile de ambalaje pentru raportare precisă.
+                    </p>
                 </div>
 
-                <!-- Authority 2 -->
-                <div class="service-card  glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-accent-500/10 transition-all duration-300 fade-in group" style="animation-delay: 0.1s;">
-                    <div class="">
-                        <div class="w-20 h-20 bg-gradient-to-br from-accent-500 to-accent-700 rounded-2xl flex items-center justify-center mb-6 mx-auto pulse-icon" style="animation-delay: 0.5s;">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-display font-bold text-2xl mb-4 text-center">Poliția Locală</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-center">
-                            Suport specializat pentru verificările efectuate de Poliția Locală privind gestionarea deșeurilor.
-                        </p>
+                <!-- Service 2 -->
+                <div class="glass rounded-3xl p-8 hover:bg-white/20 transition-all fade-in" style="animation-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
                     </div>
+                    <h3 class="font-display font-bold text-2xl text-white mb-3">Declarații Lunare</h3>
+                    <p class="text-white/80 text-lg">
+                        Pregătim și depunem declarațiile lunare conform cerințelor legale.
+                    </p>
                 </div>
 
-                <!-- Authority 3 -->
-                <div class="service-card  glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 fade-in group" style="animation-delay: 0.2s;">
-                    <div class="">
-                        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-6 mx-auto pulse-icon" style="animation-delay: 1s;">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-display font-bold text-2xl mb-4 text-center">Administrația Fondului pentru Mediu</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-center">
-                            Pregătire și asistență pentru controalele AFM privind raportările și obligațiile de mediu.
-                        </p>
+                <!-- Service 3 -->
+                <div class="glass rounded-3xl p-8 hover:bg-white/20 transition-all fade-in" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
                     </div>
+                    <h3 class="font-display font-bold text-2xl text-white mb-3">Depunere Online</h3>
+                    <p class="text-white/80 text-lg">
+                        Depunere online pe platforma AFM.ro în termenele stabilite de lege.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Benefits Section -->
-    <section id="servicii" class="relative py-32 gradient-bg overflow-hidden">
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="font-display font-black text-5xl md:text-6xl text-white mb-6">
-                    De Ce Să Alegeți<br>DSA Environment?
-                </h2>
-                <p class="text-xl text-white/80 max-w-3xl mx-auto">
-                    Expertiză actualizată și asistență personalizată pentru afacerea dumneavoastră
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Benefit 1 -->
-                <div class="glass rounded-3xl p-8 md:p-10 hover:bg-white/20 transition-all fade-in">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-display font-bold text-2xl text-white mb-3">Expertiză Actualizată</h3>
-                            <p class="text-white/80 text-lg">
-                                Cunoaștere permanentă a celor mai noi cerințe și reglementări de mediu pentru a vă asigura conformitatea completă.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Benefit 2 -->
-                <div class="glass rounded-3xl p-8 md:p-10 hover:bg-white/20 transition-all fade-in" style="animation-delay: 0.1s;">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-display font-bold text-2xl text-white mb-3">Asistență Personalizată</h3>
-                            <p class="text-white/80 text-lg">
-                                Consultanță adaptată specificului activității dumneavoastră și complexității acesteia pentru rezultate optime.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Benefit 3 -->
-                <div class="glass rounded-3xl p-8 md:p-10 hover:bg-white/20 transition-all fade-in" style="animation-delay: 0.2s;">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-display font-bold text-2xl text-white mb-3">Pregătire Eficientă</h3>
-                            <p class="text-white/80 text-lg">
-                                Ghidare în pregătirea documentelor necesare pentru a evita amenzi semnificative și întreruperea activității.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Benefit 4 -->
-                <div class="glass rounded-3xl p-8 md:p-10 hover:bg-white/20 transition-all fade-in" style="animation-delay: 0.3s;">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-display font-bold text-2xl text-white mb-3">Suport Pe Toată Durata</h3>
-                            <p class="text-white/80 text-lg">
-                                Participare și asistență pe întreaga perioadă a controlului pentru siguranța și liniștea dumneavoastră.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Target Audience Section -->
     <section class="py-32 bg-white dark:bg-gray-950">
         <div class="container mx-auto px-6">
             <div class="max-w-5xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div class="fade-in">
                         <h2 class="font-display font-black text-4xl md:text-5xl mb-6">
-                            Orice Afacere Generatoare de Deșeuri Poate Fi <span class="text-brand-red">Controlată</span>
+                            De Ce <span class="text-brand-red">DSA Environment?</span>
                         </h2>
                         <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                            Indiferent de domeniul de activitate, dacă afacerea dumneavoastră generează deșeuri, puteți fi supus unui control riguros din partea autorităților de mediu.
+                            Oferim consultanță specializată pentru eficiență în costuri și soluții personalizate pentru atingerea obiectivelor de reciclare a ambalajelor.
                         </p>
                         <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
-                            DSA Environment vă ajută să fiți pregătiți în permanență și să eliminați stresul asociat acestor verificări, protejând afacerea de eventuale penalități.
+                            Gestionăm toate detaliile raportărilor de mediu pentru a asigura conformitatea cu termenele și cerințele legale.
                         </p>
                         <a href="#contact" class="magnetic-btn inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-primary-500/50 transition-all">
                             Solicită Evaluare Gratuită
                         </a>
                     </div>
 
-                    <div class="fade-in" style="animation-delay: 0.2s;">
-                        <div class="glass rounded-3xl p-8">
-                            <h3 class="font-display font-bold text-2xl mb-6">Pregătirea Documentelor Include:</h3>
-                            <ul class="space-y-4">
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="fade-in space-y-6" style="animation-delay: 0.2s;">
+                        <!-- Benefit Card 1 -->
+                        <div class="glass rounded-3xl p-6 hover:shadow-xl transition-all">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Eficiență în Costuri</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Soluții optimizate pentru reducerea cheltuielilor cu raportările AFM.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit Card 2 -->
+                        <div class="glass rounded-3xl p-6 hover:shadow-xl transition-all">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-accent-500 to-accent-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
-                                    <span class="text-gray-700 dark:text-gray-300">Verificarea conformității documentației de mediu existente</span>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Conformitate Garantată</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Respectăm toate termenele și cerințele legale pentru evitarea sancțiunilor.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit Card 3 -->
+                        <div class="glass rounded-3xl p-6 hover:shadow-xl transition-all">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
                                     </svg>
-                                    <span class="text-gray-700 dark:text-gray-300">Completarea și actualizarea raportărilor necesare</span>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span class="text-gray-700 dark:text-gray-300">Organizarea registrelor și evidențelor de deșeuri</span>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span class="text-gray-700 dark:text-gray-300">Verificarea contractelor cu operatorii de deșeuri</span>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span class="text-gray-700 dark:text-gray-300">Pregătirea răspunsurilor la potențiale întrebări</span>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span class="text-gray-700 dark:text-gray-300">Asistență în timpul controlului și comunicare cu autoritățile</span>
-                                </li>
-                            </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Soluții Personalizate</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Adaptate specificului activității și nevoilor fiecărei companii.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -483,11 +502,11 @@
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-4xl mx-auto text-center fade-in">
                 <h2 class="font-display font-black text-5xl md:text-7xl mb-8">
-                    Aveți Nevoie de Suport<br>
-                    <span class="gradient-text">În Timpul Controalelor?</span>
+                    Simplificăm<br>
+                    <span class="gradient-text">Raportările AFM</span>
                 </h2>
                 <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
-                    Contactați-ne și lăsați-ne să vă protejăm afacerea de eventuale penalități. Cu DSA Environment, veți beneficia de o colaborare prietenoasă și de soluții eficiente.
+                    Contactați-ne pentru consultanță specializată și eliminați stresul asociat raportărilor de mediu.
                 </p>
 
                 <!-- Contact Cards -->
@@ -595,15 +614,12 @@
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             mobileMenuOverlay.classList.toggle('active');
-
-            // Prevent body scroll when menu is open
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         }
 
         hamburgerBtn.addEventListener('click', toggleMobileMenu);
         mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
 
-        // Close mobile menu when a link is clicked
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 if (mobileMenu.classList.contains('active')) {
@@ -612,7 +628,6 @@
             });
         });
 
-        // Close mobile menu on window resize if it's open
         window.addEventListener('resize', () => {
             if (window.innerWidth >= 1024 && mobileMenu.classList.contains('active')) {
                 toggleMobileMenu();
@@ -626,8 +641,6 @@
             toggle.addEventListener('click', () => {
                 const dropdownId = 'dropdown-' + toggle.dataset.dropdown;
                 const dropdown = document.getElementById(dropdownId);
-
-                // Toggle active state
                 toggle.classList.toggle('active');
                 dropdown.classList.toggle('active');
             });
@@ -655,7 +668,6 @@
         const darkModeToggle = document.getElementById('darkModeToggle');
         const html = document.documentElement;
 
-        // Check for saved preference
         if (localStorage.getItem('darkMode') === 'true') {
             html.classList.add('dark');
         }
@@ -681,35 +693,6 @@
 
         fadeElements.forEach(el => fadeObserver.observe(el));
 
-        // Number Counter Animation
-        const countElements = document.querySelectorAll('.count-number');
-
-        const countObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-                    entry.target.classList.add('counted');
-                    const target = parseInt(entry.target.dataset.target);
-                    const duration = 2000;
-                    const increment = target / (duration / 16);
-                    let current = 0;
-
-                    const updateCount = () => {
-                        current += increment;
-                        if (current < target) {
-                            entry.target.textContent = Math.floor(current);
-                            requestAnimationFrame(updateCount);
-                        } else {
-                            entry.target.textContent = target + (target === 231 || target === 40 || target === 1500 ? '+' : '');
-                        }
-                    };
-
-                    updateCount();
-                }
-            });
-        }, { threshold: 0.5 });
-
-        countElements.forEach(el => countObserver.observe(el));
-
         // Magnetic Button Effect
         const magneticBtns = document.querySelectorAll('.magnetic-btn');
 
@@ -718,7 +701,6 @@
                 const rect = btn.getBoundingClientRect();
                 const x = e.clientX - rect.left - rect.width / 2;
                 const y = e.clientY - rect.top - rect.height / 2;
-
                 btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
             });
 
@@ -726,8 +708,6 @@
                 btn.style.transform = 'translate(0, 0)';
             });
         });
-
-       
 
         // Particle Background
         const particlesContainer = document.getElementById('particles');
@@ -742,7 +722,6 @@
             particlesContainer.appendChild(particle);
         }
 
-        
         // Smooth Scroll for Anchor Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
