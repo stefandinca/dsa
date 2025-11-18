@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicii de Sustenabilitate | Raportare CSRD & ESG | DSA Environment</title>
+    <meta name="description" content="Servicii complete de sustenabilitate: raportare CSRD, analiza de materialitate dublă, amprenta de carbon, certificări ESG (EcoVadis, CDP, B Corp). Conformitate cu directivele UE.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="custom-styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16',
+                        },
+                        'accent': {
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                        },
+                        'brand-red': {
+                            DEFAULT: '#E11D48',
+                            'dark': '#BE123C',
+                        },
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Space Grotesk', 'sans-serif'],
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <div class="progress-bar" id="progressBar"></div>
+
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="glass glass-menu rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
+                <a href="index.html#hero" class="flex items-center space-x-3 group">
+                    <img src="img/logo-dsa-light.png" alt="DSA Environment" class="h-10 transition-transform duration-300 group-hover:scale-110">
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <div class="nav-dropdown">
+                        <button class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center">
+                            Sustenabilitate
+                            <svg class="w-4 h-4 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="sustenabilitate.html#raportare">Raportare de sustenabilitate</a>
+                            <a href="sustenabilitate.html#carbon">Amprenta de carbon</a>
+                            <a href="sustenabilitate.html#esg">Servicii ESG</a>
+                            <a href="sustenabilitate.html#materialitate">Analiza de materialitate</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <button class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center">
+                            Servicii
+                            <svg class="w-4 h-4 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="managementul-deseurilor.html">Managementul deșeurilor</a>
+                            <a href="raportari-afm.html">Raportări AFM</a>
+                            <a href="raportari-de-mediu.html">Raportări de mediu</a>
+                            <a href="asistenta-controale.html">Asistență controale mediu</a>
+                            <a href="servicii.html#audit">Audit de mediu</a>
+                            <a href="servicii.html#dnsh">Audit DNSH</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <button class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center">
+                            Avize și autorizații
+                            <svg class="w-4 h-4 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="avize.html#evaluare">Evaluare de mediu</a>
+                            <a href="avize.html#acord">Acord de mediu</a>
+                            <a href="avize.html#autorizatie">Autorizație de mediu</a>
+                            <a href="avize.html#ape-uzate">Acord preluare ape uzate</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <button class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center">
+                            Studii de mediu
+                            <svg class="w-4 h-4 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="studii-de-mediu.html#bilant">Bilanț de mediu</a>
+                            <a href="studii-de-mediu.html#amplasament">Raport de amplasament</a>
+                            <a href="studii-de-mediu.html#impact">Raport de impact</a>
+                            <a href="studii-de-mediu.html#securitate">Raport de securitate</a>
+                            <a href="studii-de-mediu.html#monitorizare">Monitorizare factori de mediu</a>
+                        </div>
+                    </div>
+
+                    <a href="legislatie.html" class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Legislație</a>
+                    <a href="portfolio.html" class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Portofoliu</a>
+                    <a href="#contact" class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button id="darkModeToggle" class="p-2 rounded-full glass hover:bg-white/10 transition-all" aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
+
+                    <a href="#contact" class="hidden md:inline-block magnetic-btn bg-gradient-to-r from-primary-600 to-primary-500 text-white px-6 py-2 rounded-full font-medium text-sm hover:shadow-lg hover:shadow-primary-500/50 transition-all">
+                        Contact
+                    </a>
+
+                    <button id="hamburgerBtn" class="lg:hidden p-2 rounded-full glass hover:bg-white/10 transition-all" aria-label="Toggle menu">
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="p-8">
+            <div class="flex items-center justify-between mb-12 mt-4">
+                <a href="index.html#hero"><img src="img/logo-dsa-light.png" alt="DSA Environment" class="h-10"></a>
+            </div>
+
+            <nav class="space-y-2">
+                <div class="mobile-menu-item">
+                    <button class="mobile-dropdown-toggle px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all" data-dropdown="sustenabilitate">
+                        <span>Sustenabilitate</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown" id="dropdown-sustenabilitate">
+                        <a href="sustenabilitate.html#raportare" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Raportare de sustenabilitate
+                        </a>
+                        <a href="sustenabilitate.html#carbon" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Amprenta de carbon
+                        </a>
+                        <a href="sustenabilitate.html#esg" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Servicii ESG
+                        </a>
+                        <a href="sustenabilitate.html#materialitate" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Analiza de materialitate
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mobile-menu-item">
+                    <button class="mobile-dropdown-toggle px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all" data-dropdown="servicii">
+                        <span>Servicii</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown" id="dropdown-servicii">
+                        <a href="managementul-deseurilor.html" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Managementul deșeurilor
+                        </a>
+                        <a href="raportari-afm.html" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Raportări AFM
+                        </a>
+                        <a href="raportari-de-mediu.html" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Raportări de mediu
+                        </a>
+                        <a href="asistenta-controale.html" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Asistență controale mediu
+                        </a>
+                        <a href="servicii.html#audit" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Audit de mediu
+                        </a>
+                        <a href="servicii.html#dnsh" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Audit DNSH
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mobile-menu-item">
+                    <button class="mobile-dropdown-toggle px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all" data-dropdown="avize">
+                        <span>Avize și autorizații</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown" id="dropdown-avize">
+                        <a href="avize.html#evaluare" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Evaluare de mediu
+                        </a>
+                        <a href="avize.html#acord" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Acord de mediu
+                        </a>
+                        <a href="avize.html#autorizatie" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Autorizație de mediu
+                        </a>
+                        <a href="avize.html#ape-uzate" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Acord preluare ape uzate
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mobile-menu-item">
+                    <button class="mobile-dropdown-toggle px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all" data-dropdown="studii">
+                        <span>Studii de mediu</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown" id="dropdown-studii">
+                        <a href="studii-de-mediu.html#bilant" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Bilanț de mediu
+                        </a>
+                        <a href="studii-de-mediu.html#amplasament" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Raport de amplasament
+                        </a>
+                        <a href="studii-de-mediu.html#impact" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Raport de impact
+                        </a>
+                        <a href="studii-de-mediu.html#securitate" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Raport de securitate
+                        </a>
+                        <a href="studii-de-mediu.html#monitorizare" class="mobile-dropdown-item block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                            Monitorizare factori de mediu
+                        </a>
+                    </div>
+                </div>
+
+                <a href="legislatie.html" class="mobile-menu-item block px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all">
+                    Legislație
+                </a>
+
+                <a href="portfolio.html" class="mobile-menu-item block px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all">
+                    Portofoliu
+                </a>
+
+                <a href="#contact" class="mobile-menu-item block px-6 py-4 text-lg font-semibold text-gray-900 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 rounded-2xl transition-all">
+                    Contact
+                </a>
+                <a href="#contact" class="mobile-menu-item block mt-6 px-6 py-4 text-center bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-2xl font-bold text-lg hover:shadow-lg hover:shadow-primary-500/50 transition-all">
+                    Solicită Ofertă
+                </a>
+            </nav>
+
+            <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+                <div class="space-y-4 text-sm text-gray-600 dark:text-gray-400">
+                    <a href="tel:+40721900280" class="flex items-center space-x-3 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <span>+40 721 900 280</span>
+                    </a>
+                    <a href="mailto:contact@dsa-environment.ro" class="flex items-center space-x-3 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>contact@dsa-environment.ro</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-32 pb-20">
+        <div class="mesh-gradient"></div>
+        <div id="particles"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="fade-in mb-8">
+                    <div class="inline-block px-6 py-2 glass rounded-full mb-6">
+                        <span class="text-sm font-semibold text-primary-600 dark:text-primary-400">Viitorul Afacerii Tale</span>
+                    </div>
+                    <h1 class="font-display font-black text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight">
+                        Servicii de<br>
+                        <span class="gradient-text">Sustenabilitate</span>
+                    </h1>
+                </div>
+
+                <div class="fade-in max-w-3xl mx-auto" style="animation-delay: 0.2s;">
+                    <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8">
+                        Transformăm conformitatea CSRD în avantaj competitiv. Raportare de sustenabilitate, amprenta de carbon, certificări ESG și consultanță strategică pentru un viitor sustenabil.
+                    </p>
+                </div>
+
+                <div class="fade-in flex flex-col sm:flex-row gap-4 justify-center items-center" style="animation-delay: 0.4s;">
+                    <a href="#contact" class="magnetic-btn group relative px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-full font-semibold text-lg overflow-hidden hover:shadow-2xl hover:shadow-primary-500/50 transition-all">
+                        <span class="relative z-10">Solicită Consultanță</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </a>
+
+                    <a href="#raportare" class="magnetic-btn px-8 py-4 glass border-2 border-primary-500 text-gray-900 dark:text-white rounded-full font-semibold text-lg hover:bg-white/20 dark:hover:bg-white/10 transition-all">
+                        Descoperă Serviciile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Raportare de Sustenabilitate Section -->
+    <section id="raportare" class="py-32 bg-white dark:bg-gray-950">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="font-display font-black text-4xl md:text-6xl mb-6">
+                        Raportare de <span class="gradient-text">Sustenabilitate</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                        Conformitate completă cu directiva CSRD (Corporate Sustainability Reporting Directive) și standardele ESRS
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+                    <div class="fade-in">
+                        <div class="glass rounded-3xl p-8 md:p-10">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6">
+                                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-display font-bold text-3xl mb-4">Ce Este CSRD?</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+                                Corporate Sustainability Reporting Directive (Directiva UE 2022/2464) reprezintă noul cadru legislativ european care impune companiilor raportarea detaliată a impactului lor de mediu, social și de guvernanță (ESG).
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Această directivă transformă raportarea de sustenabilitate dintr-o opțiune într-o obligație legală pentru peste 50,000 de companii din UE, inclusiv cele din România care îndeplinesc anumite criterii de mărime, cifră de afaceri sau număr de angajați.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="fade-in space-y-6" style="animation-delay: 0.1s;">
+                        <div class="glass rounded-3xl p-8 hover:shadow-xl transition-all">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl mb-2">Standarde ESRS</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        Implementare completă a celor 12 standarde European Sustainability Reporting Standards pentru raportare uniformă și comparabilă.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass rounded-3xl p-8 hover:shadow-xl transition-all">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <svg class="w-8 h-8 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl mb-2">Analiza de Materialitate Dublă</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        Evaluăm atât impactul companiei asupra mediului și societății, cât și riscurile de sustenabilitate care afectează performanța financiară.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass rounded-3xl p-8 hover:shadow-xl transition-all">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl mb-2">Strategie de Sustenabilitate</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        Dezvoltăm strategii pe termen lung aliniate la obiectivele de business și cerințele de raportare CSRD.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="glass rounded-3xl p-8 md:p-12">
+                        <h3 class="font-display font-bold text-2xl md:text-3xl mb-8 text-center">Beneficii Raportare CSRD</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="font-bold mb-2">Conformitate Legală</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Evitați sancțiuni și asigurați conformitatea cu legislația UE</p>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-accent-100 dark:bg-accent-900/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-8 h-8 text-accent-600 dark:text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="font-bold mb-2">Avantaj Competitiv</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Atrageți investitori și parteneri preocupați de sustenabilitate</p>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="font-bold mb-2">Reputație Îmbunătățită</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Demonstrați angajamentul față de practici sustenabile</p>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="font-bold mb-2">Acces la Finanțare</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Facilitează obținerea de fonduri verzi și investiții ESG</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amprenta de Carbon Section -->
+    <section id="carbon" class="relative py-32 gradient-bg overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="font-display font-black text-5xl md:text-6xl text-white mb-6">
+                        Amprenta de Carbon
+                    </h2>
+                    <p class="text-xl text-white/80 max-w-3xl mx-auto">
+                        Măsurare precisă, strategii de reducere și conformitate CBAM pentru companii și produse
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                    <div class="glass rounded-3xl p-8 md:p-10 hover:bg-white/20 transition-all fade-in">
+                        <div class="flex items-start space-x-4 mb-6">
+                            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-display font-bold text-2xl text-white mb-3">Amprenta de Carbon Corporativă</h3>
+                                <p class="text-white/80 leading-relaxed mb-4">
+                                    Calculăm emisiile de gaze cu efect de seră (GES) pe toate cele 3 scopuri (Scope 1, 2, 3) conform standardelor GHG Protocol și ISO 14064.
+                                </p>
+                                <ul class="space-y-2 text-white/90">
+                                    <li class="flex items-start space-x-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Scope 1: Emisii directe (combustibili, procese)</span>
+                                    </li>
+                                    <li class="flex items-start space-x-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Scope 2: Emisii indirecte (energie electrică, căldură)</span>
+                                    </li>
+                                    <li class="flex items-start space-x-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Scope 3: Lanț de aprovizionare și distribuție</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass rounded-3xl p-8 md:p-10 hover:bg-white/20 transition-all fade-in" style="animation-delay: 0.1s;">
+                        <div class="flex items-start space-x-4 mb-6">
+                            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-display font-bold text-2xl text-white mb-3">Amprenta de Carbon a Produselor (PCF)</h3>
+                                <p class="text-white/80 leading-relaxed mb-4">
+                                    Analiză de ciclu de viață (Life Cycle Assessment - LCA) pentru produse conform metodologiei PEF (Product Environmental Footprint).
+                                </p>
+                                <ul class="space-y-2 text-white/90">
+                                    <li class="flex items-start space-x-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Evaluare completă "from cradle to grave"</span>
+                                    </li>
+                                    <li class="flex items-start space-x-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Metodologie PEF conform Comisiei Europene</span>
+                                    </li>
+                                    <li class="flex items-start space-x-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Optimizare pentru etichetare de mediu</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 fade-in" style="animation-delay: 0.2s;">
+                    <div class="glass rounded-3xl p-8 md:p-10 hover:bg-white/20 transition-all">
+                        <h3 class="font-display font-bold text-2xl text-white mb-6">Strategii de Reducere CO2</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="text-white font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Identificare Hotspots</h4>
+                                    <p class="text-white/80 text-sm">Analizăm procesele cu cele mai mari emisii pentru intervenții țintite</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="text-white font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Plan de Acțiune</h4>
+                                    <p class="text-white/80 text-sm">Dezvoltăm roadmap cu măsuri concrete de reducere pe termen scurt, mediu și lung</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="text-white font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Obiective Net Zero</h4>
+                                    <p class="text-white/80 text-sm">Stabilim ținte aliniate la Science Based Targets initiative (SBTi)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span class="text-white font-bold">4</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Monitorizare & Raportare</h4>
+                                    <p class="text-white/80 text-sm">Sistem de tracking continuu pentru progresul către neutralitate climatică</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass rounded-3xl p-8 md:p-10 hover:bg-white/20 transition-all">
+                        <h3 class="font-display font-bold text-2xl text-white mb-6">Conformitate CBAM</h3>
+                        <p class="text-white/80 mb-6 leading-relaxed">
+                            Carbon Border Adjustment Mechanism (CBAM) este mecanismul UE de ajustare a carbonului la frontieră care impune raportarea emisiilor pentru importuri din afara UE în sectoare precum:
+                        </p>
+                        <div class="grid grid-cols-2 gap-3 mb-6">
+                            <div class="bg-white/10 rounded-lg p-3 text-center">
+                                <div class="text-white font-bold">Oțel & Fier</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-3 text-center">
+                                <div class="text-white font-bold">Ciment</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-3 text-center">
+                                <div class="text-white font-bold">Aluminiu</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-3 text-center">
+                                <div class="text-white font-bold">Îngrășăminte</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-3 text-center">
+                                <div class="text-white font-bold">Energie Electrică</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-3 text-center">
+                                <div class="text-white font-bold">Hidrogen</div>
+                            </div>
+                        </div>
+                        <p class="text-white/80 text-sm">
+                            Vă asistăm în calculul emisiilor încorporate și raportarea trimestrială obligatorie conform Regulamentului (UE) 2023/956.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicii ESG Section -->
+    <section id="esg" class="py-32 bg-white dark:bg-gray-950">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="font-display font-black text-4xl md:text-6xl mb-6">
+                        Servicii <span class="gradient-text">ESG</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                        Certificări internaționale și implementare strategii ESG pentru performanță sustenabilă
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- EcoVadis -->
+                    <div class="service-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 fade-in">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl mb-4 text-center">Certificare EcoVadis</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-center mb-6">
+                            Cea mai recunoscută platformă globală de rating ESG, cu peste 100,000 de companii evaluate. Obțineți scoruri pe 4 piloni: Mediu, Social, Etică și Aprovizionare Sustenabilă.
+                        </p>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                                <svg class="w-4 h-4 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Evaluare conform EcoVadis methodology</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                                <svg class="w-4 h-4 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Pregătire documentație pentru medalie</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                                <svg class="w-4 h-4 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Monitorizare continuă și îmbunătățire scor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CDP -->
+                    <div class="service-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-accent-500/10 transition-all duration-300 fade-in" style="animation-delay: 0.1s;">
+                        <div class="w-20 h-20 bg-gradient-to-br from-accent-500 to-accent-700 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl mb-4 text-center">Raportare CDP</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-center mb-6">
+                            Carbon Disclosure Project - platforma globală pentru raportarea impactului de mediu. Demonstrați transparență față de investitori și stakeholderi prin scoruri A-D.
+                        </p>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                                <svg class="w-4 h-4 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Raportare Climate Change (CO2)</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                                <svg class="w-4 h-4 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Water Security și Forests questionnaires</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                                <svg class="w-4 h-4 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Strategie pentru scor A (Leadership level)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- B Corp -->
+                    <div class="service-card glass rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 fade-in" style="animation-delay: 0.2s;">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl mb-4 text-center">Certificare B Corp</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-center mb-6">
+                            Certificarea B Corporation demonstrează că afacerea dumneavoastră echilibrează profit cu impact pozitiv asupra societății și mediului, conform celor mai înalte standarde de performanță verificată.
+                        </p>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                                <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>B Impact Assessment (200 puncte min.)</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                                <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Documentație guvernanță și impact social</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                                <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Acompaniere în procesul de certificare</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 fade-in" style="animation-delay: 0.3s;">
+                    <div class="glass rounded-3xl p-8 md:p-12">
+                        <h3 class="font-display font-bold text-2xl md:text-3xl mb-8 text-center">Implementare Strategii ESG Complete</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div>
+                                <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/20 rounded-xl flex items-center justify-center mb-4">
+                                    <span class="text-2xl font-bold text-primary-600 dark:text-primary-400">E</span>
+                                </div>
+                                <h4 class="font-bold text-xl mb-3">Environmental (Mediu)</h4>
+                                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                                    <li>Reducere emisii CO2</li>
+                                    <li>Eficiență energetică</li>
+                                    <li>Economie circulară</li>
+                                    <li>Biodiversitate și resurse naturale</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="w-12 h-12 bg-accent-100 dark:bg-accent-900/20 rounded-xl flex items-center justify-center mb-4">
+                                    <span class="text-2xl font-bold text-accent-600 dark:text-accent-400">S</span>
+                                </div>
+                                <h4 class="font-bold text-xl mb-3">Social (Social)</h4>
+                                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                                    <li>Drepturile angajaților</li>
+                                    <li>Diversitate și incluziune</li>
+                                    <li>Siguranță și sănătate în muncă</li>
+                                    <li>Impact comunitate locală</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-xl flex items-center justify-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600 dark:text-blue-400">G</span>
+                                </div>
+                                <h4 class="font-bold text-xl mb-3">Governance (Guvernanță)</h4>
+                                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                                    <li>Etică în afaceri</li>
+                                    <li>Anticorupție și transparență</li>
+                                    <li>Compoziție consiliu administrație</li>
+                                    <li>Politici de remunerare</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analiza de Materialitate Dubla Section -->
+    <section id="materialitate" class="relative py-32 gradient-bg overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="font-display font-black text-5xl md:text-6xl text-white mb-6">
+                        Analiza de Materialitate Dublă
+                    </h2>
+                    <p class="text-xl text-white/80 max-w-3xl mx-auto">
+                        Pilon central al raportării CSRD - evaluare integrată a impactului și riscurilor de sustenabilitate
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                    <div class="glass rounded-3xl p-8 md:p-10 hover:bg-white/20 transition-all fade-in">
+                        <div class="flex items-start space-x-4 mb-6">
+                            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-display font-bold text-2xl text-white mb-3">Impact Materiality</h3>
+                                <p class="text-white/80 leading-relaxed mb-4">
+                                    Evaluăm impactul activităților companiei dumneavoastră asupra mediului, comunității și societății. Această perspectivă "inside-out" identifică modul în care operațiunile afectează ecosistemul extern.
+                                </p>
+                                <ul class="space-y-2 text-white/90 text-sm">
+                                    <li class="flex items-start space-x-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Impact asupra schimbărilor climatice</span>
+                                    </li>
+                                    <li class="flex items-start space-x-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Efecte asupra biodiversității și ecosistemelor</span>
+                                    </li>
+                                    <li class="flex items-start space-x-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Impact social: comunități, angajați, lanț furnizori</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass rounded-3xl p-8 md:p-10 hover:bg-white/20 transition-all fade-in" style="animation-delay: 0.1s;">
+                        <div class="flex items-start space-x-4 mb-6">
+                            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-display font-bold text-2xl text-white mb-3">Financial Materiality</h3>
+                                <p class="text-white/80 leading-relaxed mb-4">
+                                    Analizăm modul în care riscurile și oportunitățile de sustenabilitate afectează performanța financiară. Perspectiva "outside-in" relevă impactul mediului extern asupra companiei.
+                                </p>
+                                <ul class="space-y-2 text-white/90 text-sm">
+                                    <li class="flex items-start space-x-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Riscuri de tranziție climatică (taxe carbon, reglementări)</span>
+                                    </li>
+                                    <li class="flex items-start space-x-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Riscuri fizice (evenimente meteorologice extreme)</span>
+                                    </li>
+                                    <li class="flex items-start space-x-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Oportunități: eficiență, inovare, accesare fonduri verzi</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in" style="animation-delay: 0.2s;">
+                    <div class="glass rounded-3xl p-8 md:p-12">
+                        <h3 class="font-display font-bold text-2xl md:text-3xl text-white mb-8 text-center">Procesul Nostru de Analiza de Materialitate</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="relative">
+                                <div class="bg-white/10 rounded-2xl p-6 h-full">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                                        <span class="text-2xl font-bold text-white">1</span>
+                                    </div>
+                                    <h4 class="font-bold text-lg text-white mb-2">Identificare Stakeholderi</h4>
+                                    <p class="text-white/80 text-sm">
+                                        Mapăm toți stakeholderii relevanți: investitori, angajați, clienți, furnizori, comunități locale, ONG-uri, autorități.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="relative">
+                                <div class="bg-white/10 rounded-2xl p-6 h-full">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                                        <span class="text-2xl font-bold text-white">2</span>
+                                    </div>
+                                    <h4 class="font-bold text-lg text-white mb-2">Consultare Stakeholderi</h4>
+                                    <p class="text-white/80 text-sm">
+                                        Interviuri, chestionare și workshop-uri pentru identificarea preocupărilor și așteptărilor legate de sustenabilitate.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="relative">
+                                <div class="bg-white/10 rounded-2xl p-6 h-full">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                                        <span class="text-2xl font-bold text-white">3</span>
+                                    </div>
+                                    <h4 class="font-bold text-lg text-white mb-2">Evaluare Impact & Risc</h4>
+                                    <p class="text-white/80 text-sm">
+                                        Scorare pe ambele dimensiuni (impact + financiar) pentru toate temele ESRS relevante din cele 10 standarde topice.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="relative">
+                                <div class="bg-white/10 rounded-2xl p-6 h-full">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                                        <span class="text-2xl font-bold text-white">4</span>
+                                    </div>
+                                    <h4 class="font-bold text-lg text-white mb-2">Matrice Materialitate</h4>
+                                    <p class="text-white/80 text-sm">
+                                        Creăm matricea de materialitate dublă care vizualizează temele materiale și determină raportarea conform CSRD.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-white/20">
+                            <p class="text-white/90 text-center leading-relaxed">
+                                Conform CSRD, analiza de materialitate dublă este obligatorie și determină ce informații trebuie raportate. Temele identificate ca materiale pe oricare dintre cele două dimensiuni trebuie incluse în raportul de sustenabilitate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="relative py-32 overflow-hidden">
+        <div class="mesh-gradient"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <h2 class="font-display font-black text-5xl md:text-7xl mb-8">
+                    Pregătiți pentru<br>
+                    <span class="gradient-text">Viitorul Sustenabil?</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
+                    Începeți transformarea spre conformitate CSRD și performanță ESG. Echipa noastră de experți vă ghidează în fiecare etapă.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <a href="tel:+40721900280" class="glass rounded-2xl p-6 hover:bg-white/20 dark:hover:bg-white/10 transition-all group">
+                        <svg class="w-8 h-8 mx-auto mb-3 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <div class="font-semibold">+40 721 900 280</div>
+                    </a>
+
+                    <a href="mailto:contact@dsa-environment.ro" class="glass rounded-2xl p-6 hover:bg-white/20 dark:hover:bg-white/10 transition-all group">
+                        <svg class="w-8 h-8 mx-auto mb-3 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <div class="font-semibold text-sm">contact@dsa-environment.ro</div>
+                    </a>
+
+                    <div class="glass rounded-2xl p-6">
+                        <svg class="w-8 h-8 mx-auto mb-3 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <div class="font-semibold text-sm">Șos. Unirii 236, Corbeanca, Ilfov</div>
+                    </div>
+                </div>
+
+                <a href="index.html#contact" class="magnetic-btn inline-block px-12 py-5 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-full font-semibold text-xl hover:shadow-2xl hover:shadow-primary-500/50 transition-all">
+                    Completează Formularul de Contact
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 text-gray-400 py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <img src="img/logo-dsa.png" alt="DSA Environment" class="h-12 mb-6 brightness-0 invert opacity-80">
+                    <p class="text-sm leading-relaxed">
+                        <div><a href="https://maps.app.goo.gl/s2RUzgURwtJqLxp48">Șoseaua Unirii 236, Comuna Corbeanca, Ilfov</a></div>
+                        <div><a href="tel:+40721900280">+40 721 900 280</a></div>
+                        <div><a href="mailto:contact@dsa-environment.ro">contact@dsa-environment.ro</a></div>
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-bold text-white mb-4">Servicii</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="managementul-deseurilor.html" class="hover:text-primary-400 transition-colors">Management Deșeuri</a></li>
+                        <li><a href="raportari-afm.html" class="hover:text-primary-400 transition-colors">Raportări AFM</a></li>
+                        <li><a href="raportari-de-mediu.html" class="hover:text-primary-400 transition-colors">Raportări de Mediu</a></li>
+                        <li><a href="asistenta-controale.html" class="hover:text-primary-400 transition-colors">Asistență Controale</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-bold text-white mb-4">Companie</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#expertiza" class="hover:text-primary-400 transition-colors">Despre Noi</a></li>
+                        <li><a href="#expertiza" class="hover:text-primary-400 transition-colors">Certificări</a></li>
+                        <li><a href="#articole" class="hover:text-primary-400 transition-colors">Articole</a></li>
+                        <li><a href="#contact" class="hover:text-primary-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-bold text-white mb-4">Legal</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-primary-400 transition-colors">Politică Confidențialitate</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors">Termeni & Condiții</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm">© 2025 DSA Environment. Toate drepturile rezervate.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-primary-400 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="#" class="hover:text-primary-400 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                    </a>
+                    <a href="#" class="hover:text-primary-400 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const hamburger = hamburgerBtn.querySelector('.hamburger');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+
+        function toggleMobileMenu() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        hamburgerBtn.addEventListener('click', toggleMobileMenu);
+        mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024 && mobileMenu.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+        });
+
+        // Mobile Dropdown Toggle
+        const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+
+        mobileDropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const dropdownId = 'dropdown-' + toggle.dataset.dropdown;
+                const dropdown = document.getElementById(dropdownId);
+                toggle.classList.toggle('active');
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const progressBar = document.getElementById('progressBar');
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            progressBar.style.transform = `scaleX(${scrolled / 100})`;
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        if (localStorage.getItem('darkMode') === 'true') {
+            html.classList.add('dark');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('darkMode', html.classList.contains('dark'));
+        });
+
+        // Fade In Animation on Scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeElements.forEach(el => fadeObserver.observe(el));
+
+        // Magnetic Button Effect
+        const magneticBtns = document.querySelectorAll('.magnetic-btn');
+
+        magneticBtns.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0, 0)';
+            });
+        });
+
+        // Particle Background
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 30;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 10 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
